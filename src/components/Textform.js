@@ -35,7 +35,7 @@ export default function Textform(props) {
   <button className="btn btn-primary m-3 " onClick={handleRemoveText}>Clear Text</button>
   <button className="btn btn-primary m-3 " onClick={handleCopy}>Copy Text</button>
     <h2>Your Text Summary</h2>
-  <p>No of characters are {text.length} and No of words are {text.split(" ").length}</p>
+  <p>No of characters are {text.length} and No of words are {text.split(" ").filter((element)=>{return element.length!==0}).length}</p>
   <h2>Preview</h2>
   <p>{text}</p>
 
